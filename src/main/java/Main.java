@@ -8,15 +8,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        JDBSConnector connector = null;
-        try {
-            connector = new JDBSConnector();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        connector.createConnect();
 
-        ConsoleReader consoleReader = new ConsoleReader(connector);
+        ConsoleReader consoleReader = new ConsoleReader();
         consoleReader.read();
 
     }

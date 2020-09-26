@@ -1,10 +1,21 @@
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class ConsoleReader {
 
     JDBSConnector connector;
-    public ConsoleReader (JDBSConnector connector){
-        this.connector = connector;
+
+
+
+    public ConsoleReader (){
+         connector = null;
+        try {
+            connector = new JDBSConnector();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        connector.createConnect();
+
     }
 
 
