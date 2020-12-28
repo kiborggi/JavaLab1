@@ -9,7 +9,7 @@ public class JDBSConnector {
         {
             try {
 
-                connection = DriverManager.getConnection("jdbc:mysql://localhost/vlad?serverTimezone=Europe/Moscow&useSSL=false","vlad","vlad");
+                connection = DriverManager.getConnection("jdbc:mysql://localhost/labjava?serverTimezone=Europe/Moscow&useSSL=false&allowPublicKeyRetrieval=true&useSSL=false", "vladuser", "3208455258Ss");
                 statement = connection.createStatement();
 
             } catch (SQLException e) {
